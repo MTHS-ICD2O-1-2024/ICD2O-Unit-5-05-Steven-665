@@ -15,12 +15,12 @@ function identifyTriangleType() {
 
   // process
   
-  if (lengthA == lengthB || lengthB == lengthC || lengthA == lengthC)  {
-    document.getElementById('triangleType').innerHTML =
-      '<p>It is isosceles triangle. </p>'
-  } else if (lengthA == lengthB && lengthB ==lengthC) {
+  if (lengthA == lengthB && lengthB ==lengthC && lengthA ==lengthC) {
     document.getElementById('triangleType').innerHTML =
       '<p>It is Equilateral triangle. </p>'
+  } else if (lengthA == lengthB || lengthB == lengthC || lengthA == lengthC)  {
+    document.getElementById('triangleType').innerHTML =
+      '<p>It is isosceles triangle. </p>'
   } else if ((lengthA < lengthB || lengthA > lengthB) || (lengthB < lengthC || lengthB > lengthC) || (lengthA < lengthC || lengthA > lengthC))  {
     document.getElementById('triangleType').innerHTML =
       '<p>It is Scalene triangle. </p>'
