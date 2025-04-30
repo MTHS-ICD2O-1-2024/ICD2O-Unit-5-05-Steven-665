@@ -15,7 +15,10 @@ function identifyTriangleType() {
 
   // process
   
-  if (lengthA == lengthB && lengthB ==lengthC && lengthA ==lengthC) {
+  if (lengthA + lengthB < lengthC) {
+    document.getElementById('triangleType').innerHTML =
+      '<p>It does not form a triangle. </p>'
+  } else if (lengthA == lengthB && lengthB ==lengthC && lengthA ==lengthC) {
     document.getElementById('triangleType').innerHTML =
       '<p>It is Equilateral triangle. </p>'
   } else if (lengthA == lengthB || lengthB == lengthC || lengthA == lengthC)  {
@@ -24,8 +27,5 @@ function identifyTriangleType() {
   } else if ((lengthA < lengthB || lengthA > lengthB) || (lengthB < lengthC || lengthB > lengthC) || (lengthA < lengthC || lengthA > lengthC))  {
     document.getElementById('triangleType').innerHTML =
       '<p>It is Scalene triangle. </p>'
-  } else if (lengthA + lengthB < lengthC) {
-    document.getElementById('triangleType').innerHTML =
-      '<p>It does not form a triangle. </p>'
   }
 }
